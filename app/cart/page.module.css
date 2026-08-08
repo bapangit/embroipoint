@@ -1,0 +1,184 @@
+.pageShell {
+  min-height: calc(100vh - 70px);
+  background: #f3f4f6;
+  padding: 32px 16px;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.heading {
+  margin: 0;
+  color: #111827;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.subheading {
+  margin: 8px 0 0;
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.cartList {
+  display: grid;
+  gap: 16px;
+}
+
+.cartCard {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 18px;
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f1f5f9;
+}
+
+.missingImage {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.cartInfo {
+  min-width: 0;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.addedDate {
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.cardHeader h2 {
+  margin: 6px 0 0;
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.sizeBadge {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 6px 10px;
+}
+
+.cartMeta {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.checkoutLink,
+.secondaryLink,
+.shopLink,
+.deleteButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border-radius: 6px;
+  font-weight: 800;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.deleteButton {
+  border: 1px solid #fecaca;
+  background: #ffffff;
+  color: #b91c1c;
+  cursor: pointer;
+  font: inherit;
+}
+
+.deleteButton:hover {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.deleteButton svg {
+  flex: 0 0 auto;
+  font-size: 1.15rem;
+  margin-right: 6px;
+}
+
+.checkoutLink,
+.shopLink {
+  background: #111827;
+  color: #ffffff;
+}
+
+.secondaryLink {
+  border: 1px solid #d1d5db;
+  color: #111827;
+}
+
+.emptyState {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 22px;
+}
+
+.emptyText {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .cartCard {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrapper {
+    width: min(220px, 100%);
+  }
+
+  .cardHeader {
+    flex-direction: column;
+  }
+}

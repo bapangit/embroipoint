@@ -1,0 +1,123 @@
+.root {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #f8fafc;
+  touch-action: pan-y;
+}
+
+.track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.32s ease;
+  will-change: transform;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  background: #f8fafc;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: none;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.navButton:disabled {
+  cursor: default;
+  opacity: 0.38;
+}
+
+.navButtonLeft {
+  left: 12px;
+}
+
+.navButtonRight {
+  right: 12px;
+}
+
+.navIconPrevious {
+  transform: rotate(180deg);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: #cbd5e1;
+  cursor: pointer;
+}
+
+.dotActive {
+  background: #0f172a;
+}
+
+@media (max-width: 900px) {
+  .root {
+    margin-bottom: 18px;
+  }
+
+  .viewport {
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.14);
+  }
+
+  .navButton {
+    display: none;
+  }
+
+  .dots {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+    left: 16px;
+    z-index: 2;
+    margin-top: 0;
+    padding: 6px 8px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.32);
+    backdrop-filter: blur(8px);
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.62);
+  }
+
+  .dotActive {
+    width: 18px;
+    background: #fff;
+  }
+}

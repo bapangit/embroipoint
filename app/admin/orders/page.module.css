@@ -1,0 +1,235 @@
+.pageShell {
+  min-height: calc(100vh - 70px);
+  background: #f3f4f6;
+  padding: 32px 16px;
+}
+
+.container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.heading {
+  margin: 0;
+  color: #111827;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.subheading {
+  margin: 8px 0 0;
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.filterForm {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.filterForm label {
+  display: grid;
+  gap: 8px;
+  color: #374151;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.filterForm select {
+  min-width: 200px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 1rem;
+  padding: 10px 12px;
+}
+
+.filterForm button,
+.clearFilterLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 10px 14px;
+}
+
+.filterForm button {
+  border: none;
+  background: #111827;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.clearFilterLink {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #111827;
+  text-decoration: none;
+}
+
+.orderList {
+  display: grid;
+  gap: 16px;
+}
+
+.orderCard,
+.emptyState {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.orderHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 16px;
+}
+
+.orderDate {
+  color: #64748b;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.orderHeader h2 {
+  margin: 6px 0 0;
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.statusBadge {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 6px 10px;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  padding: 18px 0;
+}
+
+.detailSection {
+  min-width: 0;
+}
+
+.detailSection h3 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.detailSection p,
+.emptyText {
+  margin: 0 0 6px;
+  color: #4b5563;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.productLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  border-radius: 6px;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 800;
+  margin-top: 10px;
+  padding: 9px 12px;
+  text-decoration: none;
+}
+
+.statusForm {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.statusForm label {
+  display: grid;
+  gap: 8px;
+  color: #374151;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.statusForm select {
+  min-width: 180px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 1rem;
+  padding: 10px 12px;
+}
+
+.statusForm button {
+  min-height: 42px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 10px 14px;
+}
+
+@media (max-width: 860px) {
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .orderHeader,
+  .filterForm,
+  .statusForm {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .filterForm select,
+  .filterForm button,
+  .clearFilterLink,
+  .statusForm {
+    justify-content: stretch;
+  }
+
+  .filterForm select,
+  .filterForm button,
+  .clearFilterLink,
+  .statusForm select,
+  .statusForm button {
+    width: 100%;
+  }
+}

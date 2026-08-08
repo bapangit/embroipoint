@@ -1,0 +1,256 @@
+.pageShell {
+  min-height: calc(100vh - 70px);
+  background: #f3f4f6;
+  padding: 32px 16px;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 0 0 24px;
+  color: #111827;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.successMessage {
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 18px;
+  padding: 12px 14px;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 24px;
+  align-items: start;
+}
+
+.productPanel,
+.addressPanel,
+.paymentPanel,
+.pricePanel {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.detailsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.productPanel {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.productInfo {
+  min-width: 0;
+}
+
+.productInfo h2,
+.pricePanel h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.productInfo p {
+  margin: 12px 0 0;
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.addressPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.paymentPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.panelHeader h2,
+.paymentPanel h2,
+.pricePanel h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.paymentOptions {
+  display: grid;
+  gap: 10px;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  color: #111827;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 12px;
+}
+
+.paymentOption input {
+  width: 18px;
+  height: 18px;
+  accent-color: #111827;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.paymentOption:has(input:disabled) {
+  background: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.paymentOption:has(input:disabled) input {
+  cursor: not-allowed;
+}
+
+.paymentError {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.changeLink,
+.primaryLink {
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.changeLink {
+  color: #2563eb;
+}
+
+.primaryLink {
+  display: inline-flex;
+  align-items: center;
+  background: #111827;
+  color: #ffffff;
+  padding: 10px 14px;
+}
+
+.addressDetails h3 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.addressDetails p,
+.emptyAddress p {
+  margin: 0 0 6px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.emptyAddress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.pricePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pricePanel .paymentPanel {
+  border: 0;
+  padding: 0 0 16px;
+}
+
+.priceLine,
+.totalLine {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.totalLine {
+  border-top: 1px solid #e5e7eb;
+  color: #111827;
+  font-size: 1.15rem;
+  font-weight: 800;
+  padding-top: 16px;
+}
+
+.confirmButton {
+  min-height: 48px;
+  border: 1px solid #111827;
+  border-radius: 6px;
+  background: #111827;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 12px 16px;
+}
+
+.confirmButton:disabled {
+  border-color: #d1d5db;
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+@media (max-width: 820px) {
+  .summaryGrid,
+  .productPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrapper {
+    width: min(220px, 100%);
+  }
+}
