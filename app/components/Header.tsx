@@ -52,7 +52,7 @@ export default function Header({ styles }: HeaderProps) {
         <Link href="/" className={styles.logo_link}> 
           <Image
             className={styles.logo_image}
-            src="/logo.png"
+            src="/logo-v3.png"
             alt="Catelina"
             width={800}
             height={355}
